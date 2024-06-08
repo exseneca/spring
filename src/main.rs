@@ -6,9 +6,10 @@ fn main() {
     let stiffness = 0.03;
     let mut position = String::new();
     let mut velocity: f64 = 0.0;
+    println!("Enter initial position: ");
     io::stdin()
         .read_line(&mut position)
-        .expect("Failed to rad line");
+        .expect("Failed to read line");
     let mut position: f64 = position.trim().parse().expect("Please provide a floating number");
     // position is the distance from the equilibrium - is closer to the left and +vs is to the right
     // get the number of chars width of the screen.
